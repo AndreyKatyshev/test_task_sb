@@ -3,7 +3,7 @@ import folium
 
 def style_geo_json(feature):
     return {
-        'fillColor': 'green',
+        'fillColor': 'yellow',
         'color': 'green',
     }
 
@@ -79,5 +79,11 @@ def nn(request):
 
     folium.LayerControl().add_to(nn)
 
-    nn.save('templates/map_nn_auto.html')
-    return render(request, 'map_nn_auto.html')
+    # nn.save('templates/map_nn_auto.html')
+    # return render(request, 'map_nn_auto.html')
+
+    map = nn._repr_html_()
+    context = {
+        'map': map
+    }
+    return render(request, 'map_2.html', context)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+    crossorigin="anonymous">
+    <div class = "title">
+        <h1>Карта Нижнего Новгорода</h1>
+    </div>
+    <ul class = "menu">
+		<li>5 мест жительства Автора (что бы узнать подробнее кликните на указатель)</li>
+		<li>3 рандомных парка города (название появляется при наведении)</li>
+        <li>100500 очков дизайнеру сайта</li>
+        <li>При нажатие на любое место карты, появляются координаты точки</li>
+    </ul>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-9">
+            {{ map | safe}}
+        </div>    
+    </div>
+</body>
